@@ -1,0 +1,20 @@
+geocode-google
+--------------
+
+INSTALL: http://haskell.org/haskellwiki/Cabal/How_to_install_a_Cabal_package
+
+USAGE: import Geography.Geocoding.Google (geoEncode, geoDecode)
+
+EXAMPLES:
+
+> geoEncode "1600 Amphitheatre Pkway, Mountain View, CA"
+Right (37.422502,-122.0855498)
+
+> geoDecode (37.422502,-122.0855498)
+Right "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA"
+
+This API invokes a web service provided by Google.  See
+<URL:http://code.google.com/apis/maps/documentation/geocoding/> for
+more information and possible restrictions.
+
+Enjoy.
