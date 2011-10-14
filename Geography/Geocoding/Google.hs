@@ -4,7 +4,7 @@ module Geography.Geocoding.Google (geoEncode, geoDecode, GeocodeError) where
 
 import qualified Text.HJson as J
 import qualified Data.Map as M
-import Geography.Geocoding.Get
+import Geography.Geocoding.Google.Get
 import Network.URI (parseURI)
 import Network.HTTP (urlEncodeVars)
 import Data.Maybe (fromMaybe)

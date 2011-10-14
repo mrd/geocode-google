@@ -1,5 +1,5 @@
 -- | Some handy functions for retrieving a web-page.
-module Geography.Geocoding.Get (get, maybeGet, eitherGet, timeoutGet) where
+module Geography.Geocoding.Google.Get (get, maybeGet, eitherGet, timeoutGet) where
 
 import Data.Char (intToDigit)
 import Control.Concurrent ( threadDelay, newEmptyMVar, myThreadId

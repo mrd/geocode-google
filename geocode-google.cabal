@@ -48,13 +48,13 @@ Cabal-version:       >=1.2
 
 Library
   -- Modules exported by the library.
-  Exposed-modules:     Geography.Geocoding.Google
+  Exposed-modules:   Geography.Geocoding.Google
   
   -- Packages needed in order to build this package.
-  Build-depends:       base >= 4, HTTP, network, containers, hjson
+  Build-depends:     base >= 4, HTTP, network, containers, hjson
   
   -- Modules not exported by this package.
-  -- Other-modules:       
+  Other-modules:     Geography.Geocoding.Google.Get
   
   -- Extra tools (e.g. alex, hsc2hs, ...) needed to build the source.
   -- Build-tools:         
