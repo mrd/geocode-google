@@ -10,6 +10,7 @@ import Network.URI (parseURI, URI)
 import System.Environment (getArgs)
 import System.Exit (exitFailure)
 import System.IO (hPutStrLn, stderr)
+import Control.Exception (catch, SomeException)
 
 err :: String -> IO a
 err msg = do
@@ -40,7 +41,7 @@ timeoutGet uri = do
   tid1 <- forkIO $ do
     x <- get uri 
     putMVar mv $ Right x
-    `catch` (putMVar mv . Left . show)
+    `catch` (\ e -> putMVar mv . Left . show $ (e :: SomeException))
   tid2 <- forkIO $ do
     threadDelay waitTimeout 
     killThread tid1 
